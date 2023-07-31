@@ -7,10 +7,10 @@ export const FunctionalTrafficLight = () => {
   const handleClick = () => {
     switch (lightColor) {
       case 'red':
-        setLightColor('green')
+        setLightColor('yellow')
         break;
-      case 'green':
-          setLightColor('yellow')
+      case 'yellow':
+          setLightColor('green')
           break;
       default:
         setLightColor('red')
@@ -25,8 +25,8 @@ export const FunctionalTrafficLight = () => {
       <div className="traffic-light">
         {/* Background color can be black | yellow | red | green */}
         <div className={`circle ${lightColor === 'red' ? 'red' : 'black'}`}></div>
-        <div className={`circle ${lightColor === 'green' ? 'green' : 'black'}`}></div>
         <div className={`circle ${lightColor === 'yellow' ? 'yellow' : 'black'}`}></div>
+        <div className={`circle ${lightColor === 'green' ? 'green' : 'black'}`}></div>
       </div>
       <button 
         className="next-state-button"
