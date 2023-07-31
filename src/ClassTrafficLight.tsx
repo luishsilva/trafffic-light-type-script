@@ -4,7 +4,7 @@ type TrafficLightPropsType = {
   lightColor: string
 }
 
-export class ClassTrafficLight extends Component<TrafficLightPropsType> {
+export class ClassTrafficLight extends Component {
 
   state = {
     lightColor : 'red'
@@ -13,10 +13,10 @@ export class ClassTrafficLight extends Component<TrafficLightPropsType> {
   handleClick = () => {
     switch (this.state.lightColor) {
       case 'red':
-        this.setState({ lightColor: 'green' });
-        break;
-      case 'green':
         this.setState({ lightColor: 'yellow' });
+        break;
+      case 'yellow':
+        this.setState({ lightColor: 'green' });
           break;
       default:
         this.setState({ lightColor: 'red' });
